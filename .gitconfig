@@ -1,0 +1,19 @@
+[user]
+	email = km.uec80@gmail.com
+	name = Rin Tarama
+[core]
+	editor = vim
+	pager = less
+	autocrlf = input
+[color]
+	ui = true
+[push]
+	default = simple
+[alias]
+	st = status
+	cmm = commit
+	cm = commit
+	co = checkout
+	b = branch
+	cb = checkout
+	p = push
