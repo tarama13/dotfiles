@@ -6,7 +6,6 @@
 	pager = less
 	autocrlf = input
 	quotepath = false
-	excludefile = ~/.gitignore_global
 [color]
 	ui = true
 	diff = auto
