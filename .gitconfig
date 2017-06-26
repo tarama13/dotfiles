@@ -5,12 +5,13 @@
 	editor = vim -c \"set fenc=utf-8\"
 	pager = less
 	autocrlf = input
+	quotepath = false
+	excludefile = ~/.gitignore_global
 [color]
 	ui = true
 	diff = auto
 	status = auto
 	branch = auto
-	quotepath = false
 [push]
 	default = simple
 [alias]
