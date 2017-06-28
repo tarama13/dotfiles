@@ -4,16 +4,16 @@ set encoding=utf-8 " vim 内部のエンコーディング
 scriptencoding utf-8 " vimrcのエンコーディング
 " set encoding は scriptencodingの前に
 
-runtime! ~/.vim/vimrc/*.vim
-
+runtime! $HOME/.vim/vimrc/*.vim
 
 syntax on
 colorscheme desert
 set t_Co=256
 
-" 開くときに試すエンコード
+" Encoding
+"" 開くときに試すエンコード
 set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
-" 保存時のエンコード
+"" 保存時のエンコード
 set fileencoding=utf-8
 
 " タブ幅
@@ -23,7 +23,7 @@ set shiftwidth=2
 " 自動インデントによる幅
 set softtabstop=2
 " タブをスペースにする
-set expandtab
+set noexpandtab
 " 自動インデント
 set autoindent
 " BSでインデント，改行を削除
@@ -104,4 +104,8 @@ set mouse=a
 nnoremap ; :
 nnoremap <Left> h
 nnoremap <Right> l
+
+" plugin
+filetype plugin on
+filetype indent on
 
