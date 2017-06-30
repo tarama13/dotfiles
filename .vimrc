@@ -1,52 +1,28 @@
-set encoding=utf-8
-scriptencoding utf-8
-" Vim scriptの文字コード指定
+" my vimrc
+
+set encoding=utf-8 " vim 内部のエンコーディング
+scriptencoding utf-8 " vimrcのエンコーディング
 " set encoding は scriptencodingの前に
 
-
-""""""""""""""""""
-"    dein.vim    "
-""""""""""""""""""
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-
-call dein#begin(expand('~/.vim/dein'))
-
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {
-								\ 'build': {
-								\     'windows': 'tools\\update-dll-mingw',
-								\     'cygwin': 'make -f make_cygwin.mak',
-								\     'mac': 'make -f make_mac.mak',
-								\     'linux': 'make',
-								\     'unix': 'gmake',
-								\    },
-								\ })
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('vim-latex/vim-latex')
-call dein#end()
-
+runtime! $HOME/.vim/vimrc/*.vim
 
 syntax on
 colorscheme desert
 set t_Co=256
 
-" 開くときに試すエンコード
+" Encoding
+"" 開くときに試すエンコード
 set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
-" 保存時のエンコード
+"" 保存時のエンコード
 set fileencoding=utf-8
 
 " タブ幅
 set tabstop=2
+" 行頭でのタブ幅
+set shiftwidth=2
 " 自動インデントによる幅
 set softtabstop=2
-" タブをスペースにしない
+" タブをスペースにする
 set noexpandtab
 " 自動インデント
 set autoindent
@@ -75,6 +51,10 @@ set listchars=tab:>-,extends:>,precedes:<,trail:-,eol:$
 set wrap
 " カーソル行の背景色を変える
 set cursorline
+" カーソル列の背景色を変える
+" set cursorcolumn
+" 行末の1文字先までカーソル移動できるように
+set virtualedit=onemore
 " 行頭／行末でのカーソル移動
 set whichwrap=h,l
 " 常にステータス行を表示
@@ -87,7 +67,7 @@ set showcmd
 set showmode
 " 対応する括弧を表示
 set showmatch
-
+set ambiwidth=double
 
 " 保存されていないファイルがある場合終了前に保存確認
 set confirm
@@ -125,19 +105,7 @@ nnoremap ; :
 nnoremap <Left> h
 nnoremap <Right> l
 
-" 折りたたみ
-set foldmethod=manual
-set foldlevel=1
-
-"""""""""""""""""""
-"    Vim-LaTeX    "
-"""""""""""""""""""
+" plugin
 filetype plugin on
 filetype indent on
-set shellslash
 
-" 折りたたみ
-let g:latex_fold_enabled = 2
-" ビューワ
-let g:latex_view_method = 'general'
-let g:latex_view_general_viewer = 'evince'

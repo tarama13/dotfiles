@@ -1,16 +1,30 @@
 #!/usr/bin/env perl
-$latex            = 'platex -synctex=1 -halt-on-error %O %S';
-$latex_silent     = 'platex -synctex=1 -halt-on-error -interaction=batchmode %O %S';
+$latexargs        = '-shell-escape -synctex=1 -halt-on-error';
+$latexsilentargs  = $latexargs . '-interaction=batchmode';
+
+$latex            = 'platex ' . $latexargs;
+$latex_silent     = 'platex ' . $latexsilentargs;
+
+$dvipdf           = 'dvipdfmx -f genshin.map %O -o %D %S';
+
 $bibtex           = 'pbibtex %O %B';
-$dvipdf           = 'dvipdfmx %O %S';
+$biber            = 'biber --bblencoding=utf8 -u -U --output_safechars';
+
 $makeindex        = 'mendex %O -o %D %S';
 $max_repeat       = 5;
 
-# generates pdf via dvipdfmx
+# 0: PDFを生成しない | 1: pdflatex | 2: ps2pdf | 3: dvipdfmx
 $pdf_mode         = 3;
+$aux_dir          = 'work';
+# $out_dir          = $aux_dir
 
 # Prevent latexmk from removing PDF after typeset.
 # This enables Skim to chase the update in PDF automatically.
 $pvc_view_file_via_temporary = 0;
 
-$pdf_previewer    = 'evince %O %S&'
+# previewer
+if ($^O eq 'windows') {
+	$pdf_previewer    = '${HOME}\Documents\tools\SumatraPDF-3.1.2-64/SumatraPDF.exe';
+} elsif ($^O eq 'linux'){
+	$pdf_previewer    = 'evince %S&';
+}
