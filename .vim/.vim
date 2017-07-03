@@ -1,1 +1,0 @@
-/home/komamura/dotfiles/.vim
