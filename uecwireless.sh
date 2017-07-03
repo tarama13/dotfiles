@@ -7,9 +7,9 @@ if [ `iwgetid -r` = "UECWireless" ]; then
 	export ftp_proxy="http://$proxy_server:$proxy_port/"
 	echo -e "\
 [http]\n\
-	proxy = http://proxy.uec.ac.jp:8080/\n\
+	proxy = http://$proxy_server:$proxy_port/\n\
 [https]\n\
-	proxy = https://proxy.uec.ac.jp:8080/\n\
+	proxy = https://$proxy_server:$proxy_port/\n\
 [url \"https://\"]\n\
 	insteadOf = git://" > ~/.gitconfig_proxy
 else
