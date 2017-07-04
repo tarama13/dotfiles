@@ -1,9 +1,9 @@
 #!/bin/bash
-proxy_server="proxy.uec.ac.jp"
-proxy_port="8080"
 settingfile="$HOME/dotfiles/gitconfig_proxy"
 
-if [[ `iwgetid -r` = "UECWireless" ]]; then
+set_proxy () {
+	proxy_server="proxy.uec.ac.jp"
+	proxy_port="8080"
 	export http_proxy="http://$proxy_server:$proxy_port/"
 	export https_proxy="https://$proxy_server:$proxy_port/"
 	export ftp_proxy="http://$proxy_server:$proxy_port/"
@@ -16,9 +16,20 @@ if [[ `iwgetid -r` = "UECWireless" ]]; then
 	proxy = https://$proxy_server:$proxy_port/\n\
 [url \"https://\"]\n\
 	insteadOf = git://" > $settingfile
+}
 
-else
+unset_proxy() {
 	unset http_proxy
 	unset https_proxy
 	echo "" > $settingfile
+
+}
+
+if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+	if [ "$(iwgetid -r)" = "UECWireless" ]; then
+		set_proxy
+	else
+		unset_proxy
+	fi
 fi
+
