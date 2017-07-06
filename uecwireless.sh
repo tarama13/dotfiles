@@ -25,7 +25,7 @@ unset_proxy() {
 
 }
 
-if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+if [ "$(uname -o)" = "GNU/Linux" ]; then
 	if [ "$(iwgetid -r)" = "UECWireless" ]; then
 		set_proxy
 	else
