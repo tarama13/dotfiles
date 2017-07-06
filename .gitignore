@@ -1,4 +1,4 @@
 .vim/.vim
-.vim/dein/.cache
-.vim/dein/temp
+.vim/dein/
+!.vim/dein/repos/github.com/Shougo/dein.vim
 gitconfig_proxy
