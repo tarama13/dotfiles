@@ -32,4 +32,3 @@ if [ "$(uname -o)" = "GNU/Linux" ]; then
 		unset_proxy
 	fi
 fi
-

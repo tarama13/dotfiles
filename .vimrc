@@ -8,7 +8,6 @@ runtime! vimrc/*.vim
 
 syntax on
 colorscheme desert
-" highlight Normal guibg=NONE ctermbg=NONE
 set t_Co=256
 
 " Encoding

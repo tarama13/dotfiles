@@ -2,11 +2,12 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
+repo = 'Shougo/neocomplcache.vim'
+depends = ['neosnippet.vim']
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
-depents = ['neosnippet-snippets']
+depends = ['neosnippet-snippets']
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
