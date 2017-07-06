@@ -9,3 +9,6 @@ do
   echo "$f"
   ln -sf ~/dotfiles/$f ~/$f
 done
+
+ln -sf ~/.vim ~/.config/nvim
+ln -sf ~/.vimrc ~/.config/nvim/init.vim

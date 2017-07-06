@@ -1,0 +1,16 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depents = ['neosnippet-snippets']
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets.vim'
+
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+rev  = '3787e5'

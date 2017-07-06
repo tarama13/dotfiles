@@ -4,10 +4,11 @@ set encoding=utf-8 " vim 内部のエンコーディング
 scriptencoding utf-8 " vimrcのエンコーディング
 " set encoding は scriptencodingの前に
 
-runtime! $HOME/.vim/vimrc/*.vim
+runtime! vimrc/*.vim
 
 syntax on
 colorscheme desert
+" highlight Normal guibg=NONE ctermbg=NONE
 set t_Co=256
 
 " Encoding
