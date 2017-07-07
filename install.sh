@@ -10,5 +10,5 @@ do
   ln -sf ~/dotfiles/$f ~/$f
 done
 
-ln -sf ~/.vim ~/.config/nvim
-ln -sf ~/.vimrc ~/.config/nvim/init.vim
+ln -sf ~/dotfiles/.vim ~/.config/nvim
+ln -sf ~/dotfiles/.vimrc ~/.config/nvim/init.vim
