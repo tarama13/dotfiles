@@ -15,7 +15,7 @@ $max_repeat       = 5;
 
 # 0: PDFを生成しない | 1: pdflatex | 2: ps2pdf | 3: dvipdfmx
 $pdf_mode         = 3;
-$aux_dir          = 'work';
+# $aux_dir          = 'work';
 # $out_dir          = $aux_dir
 
 # Prevent latexmk from removing PDF after typeset.
@@ -24,7 +24,7 @@ $pvc_view_file_via_temporary = 0;
 
 # previewer
 if ($^O eq 'windows') {
-	$pdf_previewer    = '${HOME}\Documents\tools\SumatraPDF-3.1.2-64/SumatraPDF.exe';
+	$pdf_previewer    = '"${HOME}/Documents/tools/SumatraPDF-3.1.2-64/SumatraPDF.exe" -reuse-instance $O $(cygpath -aw %S)';
 } elsif ($^O eq 'linux'){
-	$pdf_previewer    = 'evince %S&';
+	$pdf_previewer    = 'evince %S';
 }
