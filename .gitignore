@@ -1,5 +1,5 @@
 /.vim/*
-!/.vim/vimrc
+!/.vim/vimfiles
 !/.vim/dein.toml
 
 !/.vim/dein

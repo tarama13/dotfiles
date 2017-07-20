@@ -64,7 +64,7 @@ set gdefault   " デフォルトで複数回置換
 
 
 " Cursor
-set virtualedit=all " フリーカーソル
+set virtualedit=onemore 
 set whichwrap+=b,s,h,l,<,>,[,], " 行頭／行末でのカーソル移動
 
 
@@ -90,9 +90,11 @@ nnoremap <Space>l $
 syntax on
 colorscheme desert
 
+" Filetype
+filetype on " ファイルタイプ自動検出
+filetype plugin indent on
+ 
 
 " plugin
-runtime! vimrc.vim
-filetype plugin on
-filetype indent on
+runtime! vimfiles/*.vim " vimrc分割
 
