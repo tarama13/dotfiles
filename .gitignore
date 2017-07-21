@@ -1,5 +1,9 @@
-.vim/.netrwhist
-.vim/.vim
-.vim/dein/
-!.vim/dein/repos/github.com/Shougo/dein.vim
-gitconfig_proxy
+/.vim/*
+!/.vim/vimfiles
+!/.vim/dein.toml
+
+!/.vim/dein
+/.vim/dein/*
+!/.vim/dein/repos/github.com/Shougo/dein.vim
+
+/gitconfig_proxy

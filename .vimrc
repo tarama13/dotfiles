@@ -1,111 +1,100 @@
-" my vimrc
+scriptencoding utf-8
 
-set encoding=utf-8 " vim 内部のエンコーディング
-scriptencoding utf-8 " vimrcのエンコーディング
-" set encoding は scriptencodingの前に
+" File
+"" Encoding
+set encoding=utf-8 " vim encoding
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 自動判別
+set fileencoding=utf-8 " 保存時のエンコード
+" File Operation
+set confirm    " 保存されていないファイルがある場合終了前に保存確認
+set hidden     " 保存されていないファイルがあるときも別のファイルを開ける
+set autoread   " 自動更新
+set nobackup   " 保存時にバックアップを作成しない
+set noswapfile " 編集中にスワップファイルを作成しない
 
-runtime! vimrc/*.vim
 
-syntax on
-colorscheme desert
-set t_Co=256
+" Indent
+"" Indent
+set noexpandtab   " タブをスペースにしない
+set autoindent    " インデントの継続
+set smartindent   " 自動インデント
+"" Tab
+set tabstop=2     " Tabの幅
+set softtabstop=2 " Tab入力時の空白の幅
+set shiftwidth=2  " 自動インデントの空白の幅
 
-" Encoding
-"" 開くときに試すエンコード
-set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
-"" 保存時のエンコード
-set fileencoding=utf-8
-
-" タブ幅
-set tabstop=2
-" 行頭でのタブ幅
-set shiftwidth=2
-" 自動インデントによる幅
-set softtabstop=2
-" タブをスペースにする
-set noexpandtab
-" 自動インデント
-set autoindent
-" BSでインデント，改行を削除
+                  " BSでインデント，改行を削除
 set backspace=indent,eol,start
 
 
-" 表示に関わる設定
-
-" タイトル表示
-set title
-" 行番号表示
-set number
-" ルーラーを表示
-set ruler
-" タブ，改行の表示
-set list
-" タブ，改行などの表示設定
-"		tab:2文字で指定
-"		trail:行末に続くスペース
-"		extends:右に省略された文字があるとき
-"		precedes:左に省略
-"		eol:改行記号
+" Display
+"" Vim Status
+set title        " タイトル
+set number       " 行番号
+set ruler        " カーソルの位置表示
+set cursorline   " カーソル行の背景
+set cursorcolumn " カーソル列の背景
+""" Command line
+set laststatus=2 " 常にステータスラインを表示
+set cmdheight=2  " コマンドラインの高さ
+set showmode     " モードの表示
+set showcmd      " コマンドの表示
+set history=1000 " 履歴
+set wildmenu wildmode=list:longest,full " ファイル名補完
+"" Character
+set list        " 不可視文字を表示
 set listchars=tab:>-,extends:>,precedes:<,trail:-,eol:$
-" 折り返し表示
-set wrap
-" カーソル行の背景色を変える
-set cursorline
-" カーソル列の背景色を変える
-" set cursorcolumn
-" 行末の1文字先までカーソル移動できるように
-set virtualedit=onemore
-" 行頭／行末でのカーソル移動
-set whichwrap=h,l
-" 常にステータス行を表示
-set laststatus=2
-" コマンドラインの高さ
-set cmdheight=2
-" コマンドをステータス行に表示
-set showcmd
-" モードを表示する
-set showmode
-" 対応する括弧を表示
-set showmatch
-set ambiwidth=double
-
-" 保存されていないファイルがある場合終了前に保存確認
-set confirm
-" 保存されていないファイルがあるときも別のファイルを開ける
-set hidden
+                " trail:    行末スペース
+                " extends:  右に省略された文字
+                " precedes: 左に省略された文字
+                " eol:      改行記号
+set wrap        " 折り返し表示
+set showmatch   "対応する括弧を表示
+set matchtime=3
+set ambiwidth=double " 2バイト文字を全角に
 
 
-" 検索に関する設定
-
-" 大文字小文字を無視
-set ignorecase
-" 大文字小文字混在した言葉で検索を行った場合、大文字小文字を区別する
-set smartcase
-" インクリメンタルサーチ
-set incsearch
-" 検索ハイライト
-set hlsearch
-" 検索終了したら最初に戻る
-set wrapscan
+" Search
+set hlsearch   " 検索結果ハイライト
+set incsearch  " インクリメンタルサーチ
+set wrapscan   " 検索終了したら最初に戻る
+set ignorecase " 大文字小文字を無視
+set smartcase  " 大文字小文字混在した言葉で検索を行った場合、大文字小文字を区別する
+set gdefault   " デフォルトで複数回置換
 
 
-" 動作環境に関する設定
+" Cursor
+set virtualedit=onemore 
+set whichwrap+=b,s,h,l,<,>,[,], " 行頭／行末でのカーソル移動
 
-" コマンドラインの履歴保存量
-set history=10000
-" コマンドラインでTAB補完を有効
-set wildmenu wildmode=list:longest,full
-" マウス有効
+
+" Environment
+"" Mouse
 set mouse=a
-" インサートモードから抜けると自動でIMEオフ
-" set iminsert=2
 
-"ノーマルモードでのキー割り当て
-nnoremap ; :
+
+" Map
 nnoremap <Left> h
 nnoremap <Right> l
+"" Command Line
+nnoremap <Space>w :<C-u>w<CR>
+nnoremap <Space>q :<C-u>q<CR>
+nnoremap <Space>Q :<C-u>q!<CR>
+nnoremap ; :
+"" Cursor
+nnoremap <Space>h ^
+nnoremap <Space>l $
+
+
+" Syntax
+syntax on
+colorscheme desert
+
+" Filetype
+filetype on " ファイルタイプ自動検出
+filetype plugin indent on
+ 
 
 " plugin
-filetype plugin on
-filetype indent on
+runtime! vimfiles/*.vim " vimrc分割
 

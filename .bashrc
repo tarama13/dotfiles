@@ -7,6 +7,10 @@ if [ -f $dotfiles/uecwireless.sh ]; then
 	. $dotfiles/uecwireless.sh
 fi
 
-if [ -f $dotfiles/tmux.bashrc ]; then
+if [ "$(uname -o)" = "Cygwin" ]; then
+	source $HOME/dotfiles/base16-monokai-mod.minttyrc
+fi
+
+	if [ -f $dotfiles/tmux.bashrc ]; then
 	. $dotfiles/tmux.bashrc
 fi
