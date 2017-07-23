@@ -1,4 +1,5 @@
 #!/bin/sh
+DOTPATH=~/.dotfiles
 
 for f in .??*
 do
@@ -10,5 +11,5 @@ do
   ln -sf ~/dotfiles/$f ~/$f
 done
 
-ln -sf ~/dotfiles/.vim ~/.config/nvim
-ln -sf ~/dotfiles/.vimrc ~/.config/nvim/init.vim
+ln -sf $DOTPATH/.vim ~/.config/nvim
+ln -sf $DOTPATH/.vimrc ~/.config/nvim/init.vim
