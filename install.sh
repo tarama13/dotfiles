@@ -1,5 +1,5 @@
 #!/bin/sh
-DOTPATH=~/.dotfiles
+DOTPATH=~/dotfiles
 
 for f in .??*
 do
