@@ -3,7 +3,7 @@ scriptencoding utf-8
 " File
 "" Encoding
 set encoding=utf-8 " vim encoding
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 自動判別
+set fileencodings=utf-8,sjis,euc-jp " 自動判別
 set fileencoding=utf-8 " 保存時のエンコード
 " File Operation
 set confirm    " 保存されていないファイルがある場合終了前に保存確認
