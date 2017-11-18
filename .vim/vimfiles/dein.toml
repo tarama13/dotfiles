@@ -15,3 +15,4 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/vimshell.vim'
 rev  = '3787e5'
+
