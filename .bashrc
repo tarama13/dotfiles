@@ -9,8 +9,8 @@ fi
 
 if [ "$(uname -o)" = "Cygwin" ]; then
 	source $HOME/dotfiles/base16-monokai-mod.minttyrc
-fi
-
+else
 	if [ -f $dotfiles/tmux.bashrc ]; then
 	. $dotfiles/tmux.bashrc
+	fi
 fi

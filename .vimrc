@@ -10,7 +10,7 @@ set confirm    " 保存されていないファイルがある場合終了前に
 set hidden     " 保存されていないファイルがあるときも別のファイルを開ける
 set autoread   " 自動更新
 set nobackup   " 保存時にバックアップを作成しない
-set noswapfile " 編集中にスワップファイルを作成しない
+set swapfile   " 編集中にスワップファイルを作成する
 
 
 " Indent
