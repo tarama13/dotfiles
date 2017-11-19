@@ -97,4 +97,3 @@ filetype plugin indent on
 
 " plugin
 runtime! vimfiles/*.vim " vimrc分割
-

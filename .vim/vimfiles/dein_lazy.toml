@@ -1,3 +1,7 @@
 [[plugins]]
 repo = 'vim-latex/vim-latex'
 on_ft = ['tex', 'latex']
+
+# [[plugins]]
+# repo = 'gerw/vim-latex-suite'
+# on_ft = ['tex', 'latex']
