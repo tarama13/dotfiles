@@ -5,3 +5,8 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/vimshell.vim'
 rev  = '3787e5'
 
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'junegunn/seoul256.vim'

@@ -85,15 +85,22 @@ nnoremap ; :
 nnoremap <Space>h ^
 nnoremap <Space>l $
 
-
 " Syntax
 syntax on
-colorscheme desert
+" colorscheme koehler
 
-" Filetype
 filetype on " ファイルタイプ自動検出
 filetype plugin indent on
- 
 
 " plugin
+runtime! vimfiles/dein.vim
 runtime! vimfiles/*.vim " vimrc分割
+
+colorscheme molokai
+
+highlight Normal ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
+highlight VertSplit ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight Folded ctermbg=NONE guibg=NONE
