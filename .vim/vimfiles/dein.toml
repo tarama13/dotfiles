@@ -6,6 +6,12 @@ repo = 'Shougo/vimshell.vim'
 rev  = '3787e5'
 
 [[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
