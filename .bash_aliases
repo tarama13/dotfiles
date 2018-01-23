@@ -1,6 +1,5 @@
 # aliases
 ## utility
-alias vim='nvim'
 alias sudo='sudo -E'
 
 ## 個人的なもの
@@ -12,3 +11,4 @@ alias pbcopy='xsel --clipboard --input'
 alias latexmkpvc='latexmk -pvc'
 
 alias gt='gotrans'
+alias view='nvim -R'

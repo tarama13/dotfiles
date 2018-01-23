@@ -96,7 +96,7 @@ filetype plugin indent on
 runtime! vimfiles/dein.vim
 runtime! vimfiles/*.vim " vimrc分割
 
-colorscheme molokai
+colorscheme desert
 
 highlight Normal ctermbg=NONE guibg=NONE
 highlight LineNr ctermbg=NONE guibg=NONE

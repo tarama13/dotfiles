@@ -6,6 +6,9 @@ repo = 'Shougo/vimshell.vim'
 rev  = '3787e5'
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
@@ -16,3 +19,6 @@ repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'junegunn/seoul256.vim'
+
+[[plugins]]
+repo = 'tarama13/syntax-irc.vim'
