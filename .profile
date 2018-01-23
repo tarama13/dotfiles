@@ -43,4 +43,5 @@ shopt -s autocd
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '
 
-
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
