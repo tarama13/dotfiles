@@ -1,6 +1,7 @@
 # aliases
 ## utility
 alias sudo='sudo -E'
+alias tmux='TERM=xterm-256color tmux'
 
 ## 個人的なもの
 alias giraph='hadoop\

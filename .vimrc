@@ -3,7 +3,7 @@ scriptencoding utf-8
 " File
 "" Encoding
 set encoding=utf-8 " vim encoding
-set fileencodings=utf-8 " 自動判別
+set fileencodings=utf-8,iso-2022,euc-jp,sjis,cp932 " 自動判別
 set fileencoding=utf-8 " 保存時のエンコード
 " File Operation
 set confirm    " 保存されていないファイルがある場合終了前に保存確認
@@ -28,12 +28,13 @@ set backspace=indent,eol,start
 
 
 " Display
+set term=builtin_xterm
 "" Vim Status
 set title        " タイトル
 set number       " 行番号
 set ruler        " カーソルの位置表示
 set cursorline   " カーソル行の背景
-set cursorcolumn " カーソル列の背景
+set nocursorcolumn " カーソル列の背景
 """ Command line
 set laststatus=2 " 常にステータスラインを表示
 set cmdheight=2  " コマンドラインの高さ
@@ -85,10 +86,6 @@ nnoremap ; :
 nnoremap <Space>h ^
 nnoremap <Space>l $
 
-" Syntax
-syntax on
-" colorscheme koehler
-
 filetype on " ファイルタイプ自動検出
 filetype plugin indent on
 
@@ -96,11 +93,13 @@ filetype plugin indent on
 runtime! vimfiles/dein.vim
 runtime! vimfiles/*.vim " vimrc分割
 
+syntax enable
+set background=dark
 colorscheme desert
 
-highlight Normal ctermbg=NONE guibg=NONE
-highlight LineNr ctermbg=NONE guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE
-highlight VertSplit ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
-highlight Folded ctermbg=NONE guibg=NONE
+highlight Normal ctermbg=NONE
+highlight LineNr ctermbg=NONE
+highlight SignColumn ctermbg=NONE
+highlight VertSplit ctermbg=NONE
+highlight NonText ctermbg=NONE
+highlight Folded ctermbg=NONE
