@@ -28,7 +28,7 @@ set backspace=indent,eol,start
 
 
 " Display
-set term=builtin_xterm
+" set term=builtin_xterm
 "" Vim Status
 set title        " タイトル
 set number       " 行番号

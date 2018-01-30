@@ -15,10 +15,16 @@ repo = 'Shougo/unite.vim'
 repo = 'mattn/webapi-vim'
 
 [[plugins]]
+repo = 'tarama13/syntax-irc.vim'
+
+[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'junegunn/seoul256.vim'
 
 [[plugins]]
-repo = 'tarama13/syntax-irc.vim'
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
