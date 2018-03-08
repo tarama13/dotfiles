@@ -11,3 +11,4 @@ alias pbcopy='xsel --clipboard --input'
 alias latexmkpvc='latexmk -pvc'
 
 alias gt='gotrans'
+alias cmake='make -f ~/dotfiles/Makefile_C'
