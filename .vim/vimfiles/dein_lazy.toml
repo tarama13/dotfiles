@@ -1,0 +1,35 @@
+# [[plugins]]
+# repo = 'Shougo/neosnippet.vim'
+# hook_source = '''
+# 	imap <C-k> <Plug>(neosnippet_expand_or_jump)
+# 	smap <C-k> <Plug>(neosnippet_expand_or_jump)
+# 	xmap <C-k> <Plug>(neosnippet_expand_target)
+# 	if has('conceal')
+# 		set conceallevel=2 concealcursor=niv
+# 	endif
+# '''
+# on_i = 1
+# on_ft = ['snippet']
+# depends = ['neosnippet-snippets']
+# 
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_source = '''
+	let g:deoplete#enable_at_startup = 1
+'''
+on_i = 1
+
+[[plugins]]
+repo = 'vim-latex/vim-latex'
+on_ft = ['tex', 'latex']
+
+# [[plugins]]
+# repo = 'gerw/vim-latex-suite'
+# on_ft = ['tex', 'latex']
+
+[[plugins]]
+repo= 'mopp/AOJ.vim'
+depends = ['unite.vim', 'webapi-vim']
+on_ft = ['c', 'cpp']
+hook_source = 'let g:aoj#user_id = "tarama13"'

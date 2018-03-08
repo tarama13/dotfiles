@@ -1,6 +1,7 @@
 #!/bin/sh
 DOTPATH=~/dotfiles
 
+mkdir ~/dotfiles_backup
 for f in .??*
 do
   if [ "$f" = ".git" ]; then continue; fi
@@ -8,6 +9,7 @@ do
   if [ "$f" = ".DS_Store" ]; then continue; fi
 
   echo "$f"
+  cp ~/$f ~/dotfiles_backup/
   ln -sf ~/dotfiles/$f ~/$f
 done
 
