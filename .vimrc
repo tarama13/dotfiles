@@ -75,6 +75,9 @@ set mouse=a
 
 
 " Map
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
+
 nnoremap <Left> h
 nnoremap <Right> l
 "" Command Line
