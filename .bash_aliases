@@ -13,3 +13,5 @@ alias latexmkpvc='latexmk -pvc'
 
 alias gt='gotrans'
 alias view='nvim -R'
+
+alias cmake='make -f ~/dotfiles/Makefile_C'
